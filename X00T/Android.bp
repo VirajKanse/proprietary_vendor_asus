@@ -125,6 +125,16 @@ android_app_import {
 }
 
 android_app_import {
+	name: "workloadclassifier",
+	owner: "qcom",
+	apk: "proprietary/app/workloadclassifier/workloadclassifier.apk",
+	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+}
+
+android_app_import {
 	name: "com.qualcomm.location",
 	owner: "asus",
 	apk: "proprietary/priv-app/com.qualcomm.location/com.qualcomm.location.apk",
@@ -268,6 +278,18 @@ android_app_import {
 	},
 	privileged: true,
 	product_specific: true,
+}
+
+dex_import {
+	name: "QPerformance",
+	owner: "qcom",
+	jars: ["proprietary/framework/QPerformance.jar"],
+}
+
+dex_import {
+	name: "UxPerformance",
+	owner: "qcom",
+	jars: ["proprietary/framework/UxPerformance.jar"],
 }
 
 dex_import {
